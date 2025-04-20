@@ -99,18 +99,6 @@ Design and build a fully responsive and accessible appointment booking UI for a 
    # Check Lighthouse metrics
    ```
 
-### Deployment
-
-1. **Vercel**
-   ```bash
-   vercel
-   ```
-
-2. **Netlify**
-   ```bash
-   netlify deploy
-   ```
-
 ## Known Limitations
 
 1. **Mock Data**
