@@ -17,6 +17,7 @@ A responsive and accessible medical appointment booking system built with Next.j
 - Secure user authentication
 - Profile management
 - Appointment history tracking
+- Social media sharing optimization with Open Graph
 
 ## 🛠️ Tech Stack
 
@@ -26,6 +27,38 @@ A responsive and accessible medical appointment booking system built with Next.j
 - **Deployment**: Vercel
 - **UI Components**: Custom components with modern design
 - **State Management**: React Context API
+- **Development**: Cursor IDE with AI assistance
+- **Design**: v0.dev by Vercel
+
+## 🤖 AI Development Tools
+
+### Cursor IDE Integration
+- AI-powered code completion and suggestions
+- Smart refactoring recommendations
+- Integrated documentation generation
+- Real-time code analysis and improvements
+
+### v0.dev by Vercel
+- Used for initial UI component generation
+- Rapid prototyping of design ideas
+- Component customization and styling
+- Accessibility-first component design
+
+### Development Process
+1. **Component Creation**
+   - Initial designs generated with v0.dev
+   - Refined and customized using Cursor IDE
+   - AI-assisted code optimization
+
+2. **Code Quality**
+   - AI-powered code reviews
+   - Automated refactoring suggestions
+   - TypeScript type inference assistance
+
+3. **Documentation**
+   - AI-assisted documentation generation
+   - Code explanation and comments
+   - README maintenance and updates
 
 ## 📁 Project Structure
 
@@ -93,14 +126,37 @@ git clone https://github.com/mowgly77/doctor-booking.git
 2. Install dependencies:
 ```bash
 npm install
+# or with pnpm
+pnpm install
 ```
 
 3. Run the development server:
 ```bash
 npm run dev
+# or with pnpm
+pnpm dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Development with Cursor IDE
+1. Open the project in Cursor
+2. Use the integrated terminal for commands
+3. Take advantage of AI-powered features:
+   - Code completion
+   - Refactoring suggestions
+   - Documentation generation
+
+### Deployment with Vercel
+1. Install Vercel CLI:
+```bash
+npm install -g vercel
+```
+
+2. Deploy:
+```bash
+vercel
+```
 
 ## 📊 Data Structure
 
