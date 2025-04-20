@@ -1,24 +1,138 @@
 # Doctor Booking System
 
-A responsive and accessible medical appointment booking system.
+## Description
+A responsive and accessible medical appointment booking system built with Next.js, TypeScript, and Tailwind CSS. Allows users to view medical specialties, available doctors, and book appointments.
 
-## Features
+## Challenge Requirements
 
-- Doctor directory with specialty and availability filters
-- Appointment booking modal with date and time selection
-- Scheduled appointments view
-- Responsive design for mobile, tablet, and desktop
-- Full accessibility (ARIA, keyboard navigation)
+### Objective
+Design and build a fully responsive and accessible appointment booking UI for a healthcare platform. This task focuses purely on front-end implementation — layout, interaction, accessibility, and code quality.
 
-## Technologies
+### Implementation Status
 
-- React 18.2.0
-- TypeScript 5
-- Next.js 15.2.4
-- TailwindCSS 3.4.17
-- Styled Components
-- Lucide React (icons)
-- Zod (data validation)
+#### 1. Doctor Directory View ✅
+- [x] Mock list of doctors (name, photo, specialty, availability, location)
+- [x] Filter by specialty and availability
+- [x] "Book Appointment" button on each card
+
+#### 2. Booking Modal ✅
+- [x] Opens when clicking "Book Appointment"
+- [x] Shows doctor name and available time slots (mocked)
+- [x] Allows time slot selection and confirmation
+
+#### 3. Appointments Summary View ✅
+- [x] Section to view booked appointments
+- [x] Shows doctor name, date/time, specialty, and location
+
+### Technical Requirements
+
+#### Tech Stack ✅
+- React
+- TypeScript
+- HTML
+- CSS
+- TailwindCSS for styling
+- Zustand for state management
+
+#### Interface Requirements ✅
+- Doctor Card with:
+  - Name, specialty, rating, availability
+  - "Book" button
+- Filter Component (dropdown for specialties)
+- Appointment Modal with:
+  - Doctor name
+  - Available time slots
+  - Confirm button
+- My Appointments Section with confirmed appointments list
+
+#### Accessibility Goals ✅
+- [x] All elements keyboard navigable
+- [x] Use of aria-label, role, and aria-describedby
+- [x] Responsive across mobile, tablet, and desktop
+- [x] Passes basic checks in Lighthouse
+
+### AI Tools Usage
+- Cursor for:
+  - Base component generation
+  - Mock data creation
+  - Accessibility optimization
+  - Basic test case generation
+
+## Build and Validation
+
+### Local Build
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Generate production build:
+   ```bash
+   npm run build
+   ```
+
+3. Start production server:
+   ```bash
+   npm run start
+   ```
+
+### Requirements Validation
+
+1. **Accessibility**
+   ```bash
+   npm run test:a11y
+   ```
+
+2. **Responsive Design**
+   - Verify on mobile, tablet, and desktop devices
+   - Use Chrome DevTools for responsive testing
+
+3. **Functionality**
+   - Verify doctor filtering
+   - Test appointment booking
+   - Validate booked appointments view
+
+4. **Performance**
+   ```bash
+   npm run build
+   # Check Lighthouse metrics
+   ```
+
+### Deployment
+
+1. **Vercel**
+   ```bash
+   vercel
+   ```
+
+2. **Netlify**
+   ```bash
+   netlify deploy
+   ```
+
+## Known Limitations
+
+1. **Mock Data**
+   - Data is static and non-persistent
+   - No real backend integration
+
+2. **Authentication**
+   - No authentication system implemented
+   - Appointments are browser-local
+
+3. **Pending Features**
+   - Notification system
+   - Real-time availability calendar
+   - Doctor review system
+
+## Next Steps
+
+1. Implement user authentication
+2. Connect to real backend
+3. Add notification system
+4. Implement review system
+5. Add location map
 
 ## Project Structure
 
@@ -42,11 +156,19 @@ A responsive and accessible medical appointment booking system.
 └── public/             # Static files
 ```
 
-## Installation
+## Technologies Used
+
+- **Next.js**: React framework for web applications
+- **TypeScript**: JavaScript with static typing
+- **Tailwind CSS**: Utility-first CSS framework
+- **Radix UI**: Accessible UI components
+- **Styled Components**: For custom styling
+
+## Installation and Setup
 
 1. Clone the repository:
    ```bash
-   git clone [REPOSITORY_URL]
+   git clone [repository-url]
    ```
 
 2. Install dependencies:
@@ -59,80 +181,51 @@ A responsive and accessible medical appointment booking system.
    npm run dev
    ```
 
-4. For production:
-   ```bash
-   npm run build
-   npm run start
-   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## AI Tools Usage
+## Features
 
-### Cursor / v0 (Vercel)
-- Base component generation
-- Code optimization
-- Implementation suggestions
-- TypeScript error correction
-- Accessibility improvements
-- Performance optimization
+- Medical specialties viewing
+- Doctor listing by specialty
+- Appointment booking system
+- Modern and responsive UI
+- Accessible and reusable components
 
-### ChatGPT
-- Code validation
-- Accessibility suggestions
-- UX/UI improvements
-- Performance optimization
-- Best practices review
-- Project structure suggestions
+## Data Structure
 
-## Main Components
+### Doctors
+Each doctor has the following structure:
+```typescript
+{
+  id: string
+  name: string
+  specialty: string
+  description: string
+  image?: string
+  availability?: string
+  location?: string
+}
+```
 
-### DoctorCard
-- Displays doctor information (name, specialty, photo)
-- Star rating system
-- Availability indicator
-- Appointment booking button
+### Specialties
+Each specialty has the following structure:
+```typescript
+{
+  id: string
+  name: string
+  description: string
+  doctors: Doctor[]
+}
+```
 
-### BookingModal
-- Date and time selection
-- Availability validation
-- Appointment confirmation
-- Responsive design
+## Contributing
 
-### FilterBar
-- Specialty filtering
-- Availability filtering
-- Accessible design
-- Intuitive interface
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### AppointmentsList
-- List of scheduled appointments
-- Detailed view of each appointment
-- Responsive design
-- Empty states handled
+## License
 
-## Accessibility
-
-- Keyboard navigation implemented
-- Appropriate ARIA roles
-- Descriptive labels
-- Adequate color contrast
-- Visible focus states
-- Clear error messages
-
-## Next Steps
-
-- Implement user authentication
-- Connect to real backend
-- Add notification system
-- Implement pagination in doctor listing
-- Add more search filters
-- Implement review system
-- Add doctor location map
-
-## Current Limitations
-
-- Data is mocked
-- No data persistence
-- No authentication system
-- No advanced form validation
-- No pagination system
-- No text search system 
+This project is licensed under the MIT License. See the `LICENSE` file for details. 
