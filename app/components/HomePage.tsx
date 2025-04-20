@@ -21,13 +21,15 @@ export function HomePage() {
     <ThemeProvider theme={{}}>
       <Navbar />
       <Container>
-        <MainHeading>Find Your Doctor</MainHeading>
-        <SubHeading>Book appointments with top specialists in your area</SubHeading>
+        <div>
+          <MainHeading>Find Your Doctor</MainHeading>
+          <SubHeading>Book appointments with top specialists in your area</SubHeading>
+        </div>
 
         <FeatureGrid>
           <FeatureCard>
             <FeatureIcon>
-              <Users size={32} />
+              <Users size={40} />
             </FeatureIcon>
             <FeatureTitle>Expert Specialists</FeatureTitle>
             <FeatureText>Access to a wide network of qualified healthcare professionals</FeatureText>
@@ -35,7 +37,7 @@ export function HomePage() {
 
           <FeatureCard>
             <FeatureIcon>
-              <Calendar size={32} />
+              <Calendar size={40} />
             </FeatureIcon>
             <FeatureTitle>Easy Scheduling</FeatureTitle>
             <FeatureText>Book appointments that fit your schedule with just a few clicks</FeatureText>
@@ -43,7 +45,7 @@ export function HomePage() {
 
           <FeatureCard>
             <FeatureIcon>
-              <Clock size={32} />
+              <Clock size={40} />
             </FeatureIcon>
             <FeatureTitle>Instant Confirmation</FeatureTitle>
             <FeatureText>Receive immediate confirmation for your appointments</FeatureText>
@@ -51,14 +53,14 @@ export function HomePage() {
 
           <FeatureCard>
             <FeatureIcon>
-              <Star size={32} />
+              <Star size={40} />
             </FeatureIcon>
             <FeatureTitle>Verified Reviews</FeatureTitle>
             <FeatureText>Read authentic patient reviews to help you choose the right doctor</FeatureText>
           </FeatureCard>
         </FeatureGrid>
 
-        <Link href="/doctors" passHref>
+        <Link href="/doctors" passHref legacyBehavior>
           <CTAButton>Find Doctors</CTAButton>
         </Link>
       </Container>

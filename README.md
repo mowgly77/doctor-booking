@@ -17,6 +17,7 @@ A responsive and accessible medical appointment booking system built with Next.j
 - Secure user authentication
 - Profile management
 - Appointment history tracking
+- Social media sharing optimization with Open Graph
 
 ## 🛠️ Tech Stack
 
@@ -26,6 +27,52 @@ A responsive and accessible medical appointment booking system built with Next.j
 - **Deployment**: Vercel
 - **UI Components**: Custom components with modern design
 - **State Management**: React Context API
+
+## 🌐 Open Graph Metadata
+
+The project includes comprehensive Open Graph metadata for enhanced social media sharing:
+
+### Basic Metadata
+- `og:title` - Dynamic title based on the current page
+- `og:description` - Detailed description of the application
+- `og:type` - Set as "website"
+- `og:url` - Canonical URL of the application
+- `og:image` - Custom generated image (1200x630px)
+
+### Image Specifications
+- Dimensions: 1200x630 pixels
+- Format: JPEG
+- Location: `/public/og-image.jpg`
+- Generated using Node Canvas
+
+### Validation Tools
+To validate the Open Graph implementation, use:
+1. [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
+2. [Twitter Card Validator](https://cards-dev.twitter.com/validator)
+3. [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)
+
+### Implementation
+```typescript
+// app/layout.tsx
+export const metadata: Metadata = {
+  title: "Doctor Booking System",
+  description: "Book appointments with top specialists in your area",
+  openGraph: {
+    title: "Doctor Booking System",
+    description: "Book appointments with top specialists in your area",
+    url: "https://doctor-booking-system.vercel.app",
+    siteName: "Doctor Booking System",
+    images: [{
+      url: "/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Doctor Booking System - Book appointments with specialists",
+    }],
+    locale: "en_US",
+    type: "website",
+  }
+}
+```
 
 ## 📁 Project Structure
 

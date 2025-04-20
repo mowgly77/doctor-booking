@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components"
 import StyledComponentsRegistry from "@/lib/registry"
 import { Navbar } from "@/components/navbar"
 import { SpecialtyCard } from "@/components/specialty-card"
-import { Container, PageTitle } from "@/components/styled/common-styles"
+import { PageContainer, PageTitle, Grid } from "@/components/styled/page-styles"
 import { Doctor } from "@/types/doctor"
 
 interface Specialty {
@@ -86,10 +86,10 @@ export default function SpecialtiesPage() {
       <StyledComponentsRegistry>
         <ThemeProvider theme={{}}>
           <Navbar />
-          <Container>
+          <PageContainer>
             <PageTitle>Medical Specialties</PageTitle>
             <p>Loading specialties...</p>
-          </Container>
+          </PageContainer>
         </ThemeProvider>
       </StyledComponentsRegistry>
     )
@@ -99,13 +99,13 @@ export default function SpecialtiesPage() {
     <StyledComponentsRegistry>
       <ThemeProvider theme={{}}>
         <Navbar />
-        <Container>
+        <PageContainer>
           <PageTitle>Medical Specialties</PageTitle>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+          <Grid>
             {specialtiesList.map((specialty) => {
               console.log("Rendering specialty:", specialty)
               return (
-                <div key={specialty.id} className="w-full">
+                <div key={specialty.id}>
                   <SpecialtyCard
                     name={specialty.name}
                     description={specialty.description}
@@ -114,8 +114,8 @@ export default function SpecialtiesPage() {
                 </div>
               )
             })}
-          </div>
-        </Container>
+          </Grid>
+        </PageContainer>
       </ThemeProvider>
     </StyledComponentsRegistry>
   )

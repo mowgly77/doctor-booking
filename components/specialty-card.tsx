@@ -4,6 +4,7 @@ import * as React from "react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Doctor } from "@/types/doctor"
+import { Card as StyledCard, CardTitle as StyledCardTitle, CardText, CardMeta } from "@/components/styled/page-styles"
 
 interface SpecialtyCardProps {
   name: string
@@ -21,17 +22,13 @@ export function SpecialtyCard({ name, description, doctors }: SpecialtyCardProps
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Card className="hover:bg-gray-50 transition-colors duration-200 cursor-pointer h-full">
-          <CardHeader>
-            <CardTitle className="text-xl">{name}</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
-            <p className="text-xs text-gray-500 mt-2">
-              {doctors.length} {doctors.length === 1 ? 'doctor' : 'doctors'} available
-            </p>
-          </CardContent>
-        </Card>
+        <StyledCard>
+          <StyledCardTitle>{name}</StyledCardTitle>
+          <CardText>{description}</CardText>
+          <CardMeta>
+            {doctors.length} {doctors.length === 1 ? 'doctor' : 'doctors'} available
+          </CardMeta>
+        </StyledCard>
       </DialogTrigger>
       <DialogContent className="max-w-[425px]">
         <DialogHeader>
