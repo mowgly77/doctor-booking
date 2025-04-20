@@ -1,6 +1,7 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
+import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Doctor Booking System",
@@ -15,7 +16,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+          <main style={{ flex: 1 }}>
+            {children}
+          </main>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }

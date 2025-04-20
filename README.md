@@ -1,219 +1,78 @@
 # Doctor Booking System
 
-## Description
-A responsive and accessible medical appointment booking system built with Next.js, TypeScript, and Tailwind CSS. Allows users to view medical specialties, available doctors, and book appointments.
+A modern web application for booking medical appointments with specialists. Built with Next.js, TypeScript, and styled-components.
 
-## Challenge Requirements
+## 🔗 Live Demo
+[Vercel Deployment](https://doctor-booking-bay.vercel.app)
 
-### Objective
-Design and build a fully responsive and accessible appointment booking UI for a healthcare platform. This task focuses purely on front-end implementation — layout, interaction, accessibility, and code quality.
+## 📁 Repository
+[GitHub Repository](https://github.com/mowgly77/doctor-booking)
 
-### Implementation Status
+## 🚀 Features
 
-#### 1. Doctor Directory View ✅
-- [x] Mock list of doctors (name, photo, specialty, availability, location)
-- [x] Filter by specialty and availability
-- [x] "Book Appointment" button on each card
+- Modern and responsive UI design
+- User-friendly appointment booking system
+- Specialist search and filtering
+- Real-time appointment availability
+- Secure user authentication
+- Profile management
+- Appointment history tracking
 
-#### 2. Booking Modal ✅
-- [x] Opens when clicking "Book Appointment"
-- [x] Shows doctor name and available time slots (mocked)
-- [x] Allows time slot selection and confirmation
+## 🛠️ Tech Stack
 
-#### 3. Appointments Summary View ✅
-- [x] Section to view booked appointments
-- [x] Shows doctor name, date/time, specialty, and location
+- **Frontend Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: styled-components
+- **Deployment**: Vercel
+- **UI Components**: Custom components with modern design
+- **State Management**: React Context API
 
-### Technical Requirements
-
-#### Tech Stack ✅
-- React
-- TypeScript
-- HTML
-- CSS
-- TailwindCSS for styling
-- Zustand for state management
-
-#### Interface Requirements ✅
-- Doctor Card with:
-  - Name, specialty, rating, availability
-  - "Book" button
-- Filter Component (dropdown for specialties)
-- Appointment Modal with:
-  - Doctor name
-  - Available time slots
-  - Confirm button
-- My Appointments Section with confirmed appointments list
-
-#### Accessibility Goals ✅
-- [x] All elements keyboard navigable
-- [x] Use of aria-label, role, and aria-describedby
-- [x] Responsive across mobile, tablet, and desktop
-- [x] Passes basic checks in Lighthouse
-
-### AI Tools Usage
-- Cursor for:
-  - Base component generation
-  - Mock data creation
-  - Accessibility optimization
-  - Basic test case generation
-
-## Build and Validation
-
-### Local Build
-
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Generate production build:
-   ```bash
-   npm run build
-   ```
-
-3. Start production server:
-   ```bash
-   npm run start
-   ```
-
-### Requirements Validation
-
-1. **Accessibility**
-   ```bash
-   npm run test:a11y
-   ```
-
-2. **Responsive Design**
-   - Verify on mobile, tablet, and desktop devices
-   - Use Chrome DevTools for responsive testing
-
-3. **Functionality**
-   - Verify doctor filtering
-   - Test appointment booking
-   - Validate booked appointments view
-
-4. **Performance**
-   ```bash
-   npm run build
-   # Check Lighthouse metrics
-   ```
-
-## Known Limitations
-
-1. **Mock Data**
-   - Data is static and non-persistent
-   - No real backend integration
-
-2. **Authentication**
-   - No authentication system implemented
-   - Appointments are browser-local
-
-3. **Pending Features**
-   - Notification system
-   - Real-time availability calendar
-   - Doctor review system
-
-## Next Steps
-
-1. Implement user authentication
-2. Connect to real backend
-3. Add notification system
-4. Implement review system
-5. Add location map
-
-## Project Structure
+## 📁 Project Structure
 
 ```
-├── app/                 # Application pages
-│   ├── page.tsx        # Main page
-│   ├── doctors/        # Doctors page
-│   └── components/     # Page-specific components
-├── components/         # Reusable components
-│   ├── doctor-card.tsx
-│   ├── booking-modal.tsx
-│   ├── appointments-list.tsx
-│   ├── filter-bar.tsx
-│   └── styled/         # Component styles
-│       ├── doctor-card-styles.tsx
-│       ├── booking-modal-styles.tsx
-│       └── filter-bar-styles.tsx
-├── lib/                # Utilities and configurations
-│   └── registry.tsx    # Styled Components registry
-├── styles/             # Global styles
-└── public/             # Static files
+doctor-booking-system/
+├── app/                    # Next.js app directory
+│   ├── components/         # Page-specific components
+│   ├── globals.css         # Global styles
+│   └── layout.tsx          # Root layout
+├── components/             # Reusable components
+│   ├── footer.tsx          # Footer component
+│   ├── navbar.tsx          # Navigation bar
+│   ├── styled/             # Styled components
+│   └── ui/                 # UI components
+├── data/                   # Data files
+├── hooks/                  # Custom React hooks
+├── lib/                    # Utility functions
+├── public/                 # Static assets
+├── styles/                 # Global styles
+└── types/                  # TypeScript type definitions
 ```
 
-## Technologies Used
-
-- **Next.js**: React framework for web applications
-- **TypeScript**: JavaScript with static typing
-- **Tailwind CSS**: Utility-first CSS framework
-- **Radix UI**: Accessible UI components
-- **Styled Components**: For custom styling
-
-## Installation and Setup
+## 🚀 Getting Started
 
 1. Clone the repository:
-   ```bash
-   git clone [repository-url]
-   ```
+```bash
+git clone https://github.com/mowgly77/doctor-booking.git
+```
 
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## Features
-
-- Medical specialties viewing
-- Doctor listing by specialty
-- Appointment booking system
-- Modern and responsive UI
-- Accessible and reusable components
-
-## Data Structure
-
-### Doctors
-Each doctor has the following structure:
-```typescript
-{
-  id: string
-  name: string
-  specialty: string
-  description: string
-  image?: string
-  availability?: string
-  location?: string
-}
+```bash
+npm install
 ```
 
-### Specialties
-Each specialty has the following structure:
-```typescript
-{
-  id: string
-  name: string
-  description: string
-  doctors: Doctor[]
-}
+3. Run the development server:
+```bash
+npm run dev
 ```
 
-## Contributing
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## 📝 License
 
-## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This project is licensed under the MIT License. See the `LICENSE` file for details. 
+## 👨‍💻 Author
+
+- **Rob Alcántara**
+  - Fullstack Developer | Product Owner | Branding | UX/UI
+  - GitHub: [mowgly77](https://github.com/mowgly77) 
